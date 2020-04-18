@@ -1,0 +1,14 @@
+
+
+The schematic was designed using EasyEDA.
+
+This repo contains:
+
+ - Arduino sketch (INO) for the program
+ - EasyEDA source file (JSON) for the schematic
+ - PDF file of the component schematic
+
+Ferrie J Bank,
+Amsterdam 18 April 2020
+
+https://github.com/oudesnepelaar
