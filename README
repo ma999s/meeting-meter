@@ -1,14 +1,37 @@
+This is a fun electronics hobby project I've been working on since August 2019.
+It is a timer (actually a stopwatch) for meetings that calculates the costs, based on the hourly rate of the participants.
+It was inspired by the long, often dreary, meetings me and my teammates would sometimes have to endure.
+I envisioned a better world where people would be aware of the costs of long meetings, hoping that would make them get to
+the point more quickly :D
 
+It is based on an Arduino Nano, with a shift register to control the LED and a rotary encoder for input.
+As the Arduino Nano comes equipped with its own internal voltage regulator, this device runs nicely on a 9V block battery,
+even while the circuit and the microcontroller require only 5V.
+
+There are some small indicator LEDs to show when the power is on and when the clock is running.
+The rotary encoder used to set the average hourly rate and the number of participants, is a standard KY-040.
+I use a library to decode the turns of the KY-040, which is needs on 2 interrupts on the Arduino Nano.
+The code for this library can be found on:
+https://github.com/oudesnepelaar/Rotary-Arduino-library
+
+There is a video on YouTube thats shows a quick demo of the controls.
+'R' sets the rate in euros per hours, 'P' sets the number of participants to the meeting.
+The clock then updates the total cost every second while it's running, showing euros (or any other currency depending on the rate setting). More or less like a taxi meter, but for meetings with multiple participants.
 
 The schematic was designed using EasyEDA.
 
 This repo contains:
 
- - Arduino sketch (INO) for the program
- - EasyEDA source file (JSON) for the schematic
- - PDF file of the component schematic
+ - Arduino sketch (INO) for the program - tested successfully on Arduino Uno & Nano
+ - EasyEDA source file (JSON) for the schematic - in case you want to change it a bit for your own use
+ - PDF file of the component schematic - for easy viewing
 
+The /pics folder shows some snaps of the building of the device in different stages.
+ 
+The video briefly showing the device in action, can be found on YouTube:
+https://youtu.be/manwS1O5PpQ
+ 
 Ferrie J Bank,
-Amsterdam 18 April 2020
+Amsterdam, 27 May 2020
 
 https://github.com/oudesnepelaar
